@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {SyntheticEvent} from "react";
+import {createRef, SyntheticEvent} from "react";
 import IntroSection from "./Intro-Section";
 import './LandingPage.css';
 
@@ -11,20 +11,52 @@ interface ILandingProps {
 interface ILandingStates {
     // myRef: RefObject<HTMLDivElement>;
     myType: string;
+    isTop: boolean;
+    navbarClass: string
 
 }
 
 class LandingPage extends React.Component<ILandingProps, ILandingStates> {
-    // private myRef = createRef<HTMLDivElement>();
+    // Todo: delete mytype for
+    // Todo: refactor navbar to a component
+    private myRef = createRef<HTMLDivElement>();
+
+    private navbarTransparent = "navbar sticky-top" +
+        " shadow-sm bg-white " +
+        "rounded col-md-12 " +
+        "navbar-st navbar-transparent";
+
+    private navbarWhite = "navbar sticky-top" +
+        " shadow-sm bg-white " +
+        "rounded col-md-12 " +
+        "navbar-st navbar-white";
 
 
     constructor(props: ILandingProps) {
         super(props)
         // this.myRef = React.createRef();
-        this.state = {myType: this.props.type};
+        this.state = {
+            isTop: true,
+            myType: this.props.type,
+            navbarClass: this.navbarTransparent
+        };
 
     }
 
+
+    public componentDidMount() {
+        document.addEventListener('scroll', () => {
+            const isTop = window.scrollY < 100;
+            if (isTop !== this.state.isTop) {
+
+                if (isTop === true) {
+                    this.setState({isTop, navbarClass: this.navbarTransparent});
+                } else {
+                    this.setState({isTop, navbarClass: this.navbarWhite});
+                }
+            }
+        });
+    }
 
     public render() {
         // noinspection TsLint
@@ -32,8 +64,8 @@ class LandingPage extends React.Component<ILandingProps, ILandingStates> {
             <div className="LandingPage.tsx row">
 
                 <nav id="navbar"
-                    // ref={this.state.myRef}
-                     className={"navbar sticky-top shadow-sm bg-white rounded col-md-12 navbar-st"}>
+                     ref={this.myRef}
+                     className={this.state.navbarClass}>
                     <div className="col-md-5 logo-con">
                         <a className="navbar-brand" href="#">Salvus health</a>
                     </div>
