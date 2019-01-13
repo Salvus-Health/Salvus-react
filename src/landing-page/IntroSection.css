@@ -1,0 +1,9 @@
+.picture {
+    padding: 0px;
+    /*min-height: 500px;*/
+}
+
+.picture-info {
+    position: absolute;
+    bottom: 60px;
+}

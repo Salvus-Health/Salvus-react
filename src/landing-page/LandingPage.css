@@ -1,0 +1,36 @@
+.navbar-options {
+    border-radius: 18px;
+    font-weight: bold;
+}
+
+.navbar-options:hover {
+    background: #f0edf1;
+}
+
+.sign-in-option {
+    background: linear-gradient(93.33deg, #70CCFF 7.02%, #69B7FF 97.42%);
+    color: white;
+}
+
+.sign-in-option:hover {
+    background: linear-gradient(93.33deg, #70CCFF 7.02%, #69B7FF 97.42%);
+    color: white;
+}
+
+.navbar-st {
+    margin: 0px;
+    position: fixed;
+    background: rgba(255,255,255, 0) !important;
+}
+
+.but-group{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.logo-con{
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+}
