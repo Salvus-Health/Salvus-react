@@ -42,3 +42,30 @@
     justify-content: flex-start;
     height: 100%;
 }
+
+.info-s{
+    margin-top: 127px;
+    margin-bottom: 127px;
+}
+
+
+.title-s{
+    text-align: justify;
+    font-size: 48px;
+}
+
+.description-s{
+    text-align: justify;
+}
+
+/**
+these last two classes define the color of the slide number indicators, if removed these indicators will turn white
+you can thank the carousel library for making me use this hack
+ */
+li.active {
+    background-color: #70CCFF !important;
+}
+
+li{
+    background-color: #C4C4C4 !important;
+}
