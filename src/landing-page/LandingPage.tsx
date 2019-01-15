@@ -2,6 +2,7 @@ import * as React from 'react';
 import {createRef, SyntheticEvent} from "react";
 import IntroSection from "./Intro-Section";
 import './LandingPage.css';
+import StoriesSection from './stories/Stories-Section';
 
 interface ILandingProps {
     color?: 'blue' | 'green' | 'yellow';
@@ -89,6 +90,7 @@ class LandingPage extends React.Component<ILandingProps, ILandingStates> {
 
                 </nav>
                 <IntroSection/>
+                <StoriesSection/>
             </div>
         );
     }
