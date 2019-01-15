@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {createRef, SyntheticEvent} from "react";
+import InfoSection from "./info-section/InfoSection";
 import IntroSection from "./Intro-Section";
 import './LandingPage.css';
 
@@ -22,13 +23,13 @@ class LandingPage extends React.Component<ILandingProps, ILandingStates> {
     private myRef = createRef<HTMLDivElement>();
 
     private navbarTransparent = "navbar sticky-top" +
-        " shadow-sm bg-white " +
-        "rounded col-md-12 " +
+        " bg-white " +
+        "col-md-12 " +
         "navbar-st navbar-transparent";
 
     private navbarWhite = "navbar sticky-top" +
-        " shadow-sm bg-white " +
-        "rounded col-md-12 " +
+        " shadow bg-white " +
+        "col-md-12 " +
         "navbar-st navbar-white";
 
 
@@ -89,6 +90,7 @@ class LandingPage extends React.Component<ILandingProps, ILandingStates> {
 
                 </nav>
                 <IntroSection/>
+                <InfoSection/>
             </div>
         );
     }
