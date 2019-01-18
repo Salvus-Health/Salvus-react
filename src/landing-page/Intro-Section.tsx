@@ -7,11 +7,18 @@ class IntroSection extends React.Component {
             <div className="col-md-12" style={{padding: "0px"}}>
                 <img className="col-md-12 picture" src={"/assets/Holding-Hands-Doctor.svg"}/>
 
-                <div className={"picture-info"}>
-                    <p>Imagine knowing your doctor</p>
-                    <p>Sales pitch goes here</p>
-                    <button>Check locations</button>
+                <div className={"picture-info col-md-12"}>
+
+                    <div className="info-column offset-1">
+                        <p className={"intro-content col-md-9"}>Imagine knowing your doctor</p>
+                        <p className="col-md-9 pitch">Sales pitch goes here</p>
+
+                        <div className="col-md-6">
+                            <button className="btn location-but col-md-9">Check locations</button>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         );
     }

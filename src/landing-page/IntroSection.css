@@ -5,5 +5,34 @@
 
 .picture-info {
     position: absolute;
-    bottom: 60px;
+    display: flex;
+    justify-content: flex-start;
+    bottom: 40vh;
+}
+
+.intro-content {
+    font-size: 64px;
+    color: white;
+    text-align: left;
+}
+
+.pitch {
+    font-size: 36px;
+    color: white;
+    text-align: left;
+}
+
+.info-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    /*margin-left: 20px;*/
+}
+
+.location-but {
+    background: linear-gradient(to right, #4846B4, #69B7FF);
+    border-radius: 6px;
+    color:white;
+    font-size: 27px;
 }
