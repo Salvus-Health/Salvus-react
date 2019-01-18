@@ -23,18 +23,11 @@
 
 }
 
-.navbar-transparent{
-    background: rgba(255,255,255, 0) !important;
-}
 
-.navbar-white{
-    background: white;
-}
-
-.but-group{
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
+/*delete this*/
+li.but-group{
+    background-color: transparent !important;
+    margin-right: 40px;
 }
 
 .logo-con{
@@ -49,23 +42,18 @@
 }
 
 
-.title-s{
-    text-align: justify;
-    font-size: 48px;
-}
-
-.description-s{
-    text-align: justify;
+.car-item{
+    height: 300px;
 }
 
 /**
 these last two classes define the color of the slide number indicators, if removed these indicators will turn white
 you can thank the carousel library for making me use this hack
  */
-li.active {
+.carousel-indicators li.active {
     background-color: #70CCFF !important;
 }
 
-li{
+.carousel-indicators li{
     background-color: #C4C4C4 !important;
 }

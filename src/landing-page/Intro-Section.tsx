@@ -4,8 +4,8 @@ import "./IntroSection.css";
 class IntroSection extends React.Component {
     public render() {
         return (
-            <div className="col-md-12" style={{padding: "0px"}}>
-                <img className="col-md-12 picture" src={"/assets/Holding-Hands-Doctor.svg"}/>
+            <div className="col-md-12 pic-container" style={{padding: "0px"}}>
+                <img className="picture" src={"/assets/Holding-Hands-Doctor.svg"}/>
 
                 <div className={"picture-info col-md-12"}>
 
@@ -13,7 +13,7 @@ class IntroSection extends React.Component {
                         <p className={"intro-content col-md-9"}>Imagine knowing your doctor</p>
                         <p className="col-md-9 pitch">Sales pitch goes here</p>
 
-                        <div className="col-md-6">
+                        <div className="col-md-6 pic-but-c">
                             <button className="btn location-but col-md-9">Check locations</button>
                         </div>
                     </div>

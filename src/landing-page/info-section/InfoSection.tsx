@@ -7,6 +7,8 @@ import {
 } from 'reactstrap';
 import {LandingPageInfo} from "./LandingPageInfo";
 
+import "./InfoSection.css"
+
 interface IInfoState {
     activeIndex: number
 }
@@ -73,13 +75,14 @@ class InfoSection extends React.Component <any, IInfoState> {
                     onExiting={this.onExiting}
                     onExited={this.onExited}
                     key={item.img}
+                    className={"info-container"}
                 >
-                    <div className="col-md-12 row" style = {{marginBottom:"80px"}}>
+                    <div className="col-md-12 row car-item" style = {{marginBottom:"80px"}}>
                         <div className="col-md-6">
                             <img className="col-md-6" src={item.img} alt={"Alt text"}/>
                         </div>
 
-                        <div className="col-md-6 info-container">
+                        <div className="col-md-6">
                             <p className="title-s col-md-12">Emergency Care insurance</p>
                             <p className="description-s col-md-12">
                                 In the realm of DPC, one has many questions regarding a big life
