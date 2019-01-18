@@ -19,6 +19,9 @@ class InfoSection extends React.Component <any, IInfoState> {
     private items: LandingPageInfo [] = [
         new LandingPageInfo("/assets/images/landing/stories-ambulance.png", "this is my info"),
         new LandingPageInfo("/assets/Holding-Hands-Doctor.svg", "this is my changed info"),
+        new LandingPageInfo("/assets/Holding-Hands-Doctor.svg", "this is my changed info"),
+        new LandingPageInfo("/assets/Holding-Hands-Doctor.svg", "this is my changed info"),
+        new LandingPageInfo("/assets/Holding-Hands-Doctor.svg", "this is my changed info"),
     ];
     private animating = false;
 

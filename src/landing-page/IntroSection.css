@@ -28,23 +28,21 @@
 .location-but {
     background: linear-gradient(to right, #4846B4, #69B7FF);
     border-radius: 6px;
-    color:white;
+    color: white;
     font-size: 27px;
 }
 
-
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .picture{
-        padding:0px;
-        height: 49vh;
+    .picture {
+        padding: 0px;
+        height: 103vw;
         position: relative;
         left: -207px;
         overflow: hidden;
     }
 
-    .pic-container{
+    .pic-container {
         overflow: hidden;
     }
 
@@ -55,12 +53,12 @@
         bottom: 130px;
     }
 
-    .pitch{
+    .pitch {
         display: none;
     }
 
-    .pic-but-c{
-        display:none;
+    .pic-but-c {
+        display: none;
     }
 
     .intro-content {
@@ -68,21 +66,77 @@
         color: white;
         text-align: left;
     }
+
+    .mobile-s {
+        display: flex;
+        position: absolute;
+        background-image: radial-gradient(circle at 50% -85%, rgba(0, 0, 0, 0) 254px, red 80px),
+        radial-gradient(circle at 90% 100%, rgba(0, 0, 0, 0) 200px, #fff 201px);
+        width: 100%;
+        height: 200px;
+    }
+
+    .rectangle-s {
+        padding: 0px;
+        display: block;
+        position: relative;
+        width: 100%;
+        bottom: 27vh;
+        height: 28vh;
+        overflow: hidden;
+    }
+
+    .white-rec-s {
+        position: relative;
+        width: 100%;
+    }
+
+    .blue-rec-s {
+        position: relative;
+        width: 100%;
+        bottom: 70vw;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .example {background: green;}
+    .example {
+        background: green;
+    }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .example {background: blue;}
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+    .blue-rec-s {
+        position: relative;
+        width: 100%;
+        bottom: 81vw;
+    }
+
+    .white-rec-s {
+        position: relative;
+        width: 100%;
+        bottom: 5vw;
+    }
+
+    .rectangle-s {
+        display: block;
+        position: relative;
+        width: 100%;
+        bottom: 27vh;
+        height: 28vh;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 5vw;
+        overflow: hidden;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .example {background: orange;}
+    .example {
+        background: orange;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -92,5 +146,12 @@
         /*min-height: 500px;*/
         width: 100%;
     }
-    .example {background: pink;}
+
+    .mobile-s {
+        display: none
+    }
+
+    .rectangle-s {
+        display: none;
+    }
 }

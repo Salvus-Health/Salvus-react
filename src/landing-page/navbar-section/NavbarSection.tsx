@@ -1,3 +1,4 @@
+import Octicon, {ThreeBars} from "@githubprimer/octicons-react";
 import * as React from 'react';
 import {SyntheticEvent} from "react";
 import {
@@ -27,7 +28,8 @@ interface INavbarStates {
     // myRef: RefObject<HTMLDivElement>;
     myType: string;
     navbarClass: string;
-    triangleClass:string;
+    triangleClass: string;
+    menuCStyle: any
 }
 
 
@@ -38,9 +40,9 @@ class NavbarSection extends React.Component<INavbarProps, INavbarStates> {
 
     private navbarWhite = "navbar-white shadow";
 
-    private triangleOpen = "menu-background-open col-6";
+    private triangleOpen = "menu-background-open shadow-lg col-6";
 
-    private triangleClose ="menu-background";
+    private triangleClose = "menu-background";
 
 
     constructor(props: any) {
@@ -50,25 +52,30 @@ class NavbarSection extends React.Component<INavbarProps, INavbarStates> {
         this.state = {
             isOpen: false,
             isTop: true,
+            menuCStyle: {},
             myType: this.props.type,
             navbarClass: this.navbarTransparent,
-            triangleClass:this.triangleClose
+            triangleClass: this.triangleClose
         };
     }
 
     public toggle() {
-        if(this.state.isOpen){
+        if (this.state.isOpen) {
             this.setState(
                 {
                     isOpen: !this.state.isOpen,
+                    menuCStyle: {overflow: "hidden"},
+                    navbarClass: this.navbarTransparent,
                     triangleClass: this.triangleClose
                 }
             )
         }
-        else{
+        else {
             this.setState(
                 {
                     isOpen: !this.state.isOpen,
+                    menuCStyle: {overflow: "visible"},
+                    navbarClass: "nav-mobile-white",
                     triangleClass: this.triangleOpen
                 }
             )
@@ -79,6 +86,9 @@ class NavbarSection extends React.Component<INavbarProps, INavbarStates> {
         document.addEventListener('scroll', () => {
             const isTop = window.scrollY < 100;
             if (isTop !== this.state.isTop) {
+                if (this.state.isOpen){
+                    return;
+                }
 
                 if (isTop === true) {
                     // alert("transparent");;
@@ -97,42 +107,45 @@ class NavbarSection extends React.Component<INavbarProps, INavbarStates> {
         return (
 
             <div className="col-md-12 fixed-top" style={{padding: "0px"}}>
-                <div className={this.state.triangleClass}>
-                    {/*<img src="/assets/images/navbar/menu.png"/>*/}
 
-                </div>
-                <Navbar className={this.state.navbarClass + " col-md-12"} expand="md">
-                    <NavbarBrand className="row ">
 
-                        <NavbarToggler onClick={this.toggle}>
-                            Salvus
-                        </NavbarToggler>
-
+                {/*<div className={"menu-container"} style={this.state.menuCStyle}>*/}
+                {/*<div className={this.state.triangleClass}/>*/}
+                {/*</div>*/}
+                <Navbar className={this.state.navbarClass + " col-md-12 col-6"} expand="md">
+                    <NavbarBrand className="row brand-nb">
+                        Salvus
                     </NavbarBrand>
+
+
+                    <NavbarToggler onClick={this.toggle} style={ {backgroundColor:"white"}}>
+                        <Octicon icon={ThreeBars}/>
+                    </NavbarToggler>
+
 
                     <Collapse isOpen={this.state.isOpen}
                               className="col-md-12"
                               navbar={true}>
-                        <Nav className="col-6 " navbar={true}>
-                            <NavItem>
+                        <Nav className=" " navbar={true} >
+                            <NavItem className={"nav-op-c"}>
                                 <button type="button" className="btn navbar-options">Stories</button>
                             </NavItem>
 
-                            <NavItem>
+                            <NavItem className={"nav-op-c"}>
                                 <button type="button"
                                         onClick={this.buttonClick.bind(this)}
                                         className="btn navbar-options nav-item ">{this.props.color}</button>
                             </NavItem>
 
-                            <NavItem>
+                            <NavItem className={"nav-op-c"}>
                                 <button type="button" className="btn navbar-options nav-item">About us</button>
 
                             </NavItem>
 
-                            <NavItem>
+                            <NavItem className={"nav-op-c"}>
                                 <button type="button" className="btn navbar-options nav-item">Create Account</button>
                             </NavItem>
-                            <NavItem>
+                            <NavItem className={"nav-op-c"}>
                                 <button type="button" className="btn navbar-options nav-item sign-in-option">Sign in
                                 </button>
                             </NavItem>
@@ -141,7 +154,8 @@ class NavbarSection extends React.Component<INavbarProps, INavbarStates> {
                     </Collapse>
                 </Navbar>
             </div>
-        );
+        )
+            ;
     }
 
     private buttonClick(e: SyntheticEvent) {

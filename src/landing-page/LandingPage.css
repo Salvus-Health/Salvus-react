@@ -1,21 +1,4 @@
-.navbar-options {
-    border-radius: 18px;
-    font-weight: bold;
-}
 
-.navbar-options:hover {
-    background: #f0edf1;
-}
-
-.sign-in-option {
-    background: linear-gradient(93.33deg, #70CCFF 7.02%, #69B7FF 97.42%);
-    color: white;
-}
-
-.sign-in-option:hover {
-    background: linear-gradient(93.33deg, #70CCFF 7.02%, #69B7FF 97.42%);
-    color: white;
-}
 
 .navbar-st {
     margin: 0px;
@@ -56,4 +39,13 @@ you can thank the carousel library for making me use this hack
 
 .carousel-indicators li{
     background-color: #C4C4C4 !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .info-s{
+      margin-top: 60px;
+      /*bottom: 30vw;*/
+      margin-bottom: 20px;
+  }
 }
