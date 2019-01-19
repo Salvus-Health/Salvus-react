@@ -20,6 +20,7 @@ const style = {
         // top: '20%'
         // marginLeft: '30%',
         // zIndex: -1
+        maxWidth: '40vw'
     },
     heartWhiteOverlayStyle: {
         background: 'linear-gradient(91.33deg, #FFFFFF 9.28%, rgba(255, 255, 255, 0) 67.81%)',
