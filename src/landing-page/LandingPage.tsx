@@ -6,7 +6,9 @@ import IntroSection from "./Intro-Section";
 import './LandingPage.css';
 import NavbarSection from "./navbar-section/NavbarSection";
 
+
 // import StoriesSection from './stories/Stories-Section';
+
 
 
 interface ILandingProps {
@@ -61,6 +63,7 @@ class LandingPage extends React.Component<ILandingProps, ILandingStates> {
                 {/*<img className="white-rec-s" src={"/assets/images/landing/BlueRectangle.png"}/>*/}
                 {/*<img className="blue-rec-s" src={"/assets/images/landing/Rectangle.png"}/>*/}
                 {/*</div>*/}
+
                 {/* <StoriesSection/> */}
 
                 <InfoSection/>
