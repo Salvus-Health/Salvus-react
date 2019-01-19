@@ -1,0 +1,19 @@
+.landing-stories--container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+}
+
+.landing-stories--container .landing-stories--grid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 90% 10%;
+    width: 70%;
+    height: 70%;
+    margin: auto;
+}
+
+.landing-stories--container .landing-stories--grid .landing-stories--grid-carousel {
+    grid-column-start: span 2;
+}
