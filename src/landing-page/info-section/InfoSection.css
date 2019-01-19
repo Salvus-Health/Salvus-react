@@ -1,5 +1,6 @@
-
-
+.car-item{
+    height: 300px;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -15,6 +16,13 @@
 
     .info-container{
         margin-bottom: 70px;
+    }
+    .car-item{
+        height: 67vh;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0px;
+        /*justify-content: center;*/
     }
 }
 

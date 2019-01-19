@@ -25,10 +25,6 @@ li.but-group{
 }
 
 
-.car-item{
-    height: 300px;
-}
-
 /**
 these last two classes define the color of the slide number indicators, if removed these indicators will turn white
 you can thank the carousel library for making me use this hack
