@@ -1,9 +1,13 @@
 import * as React from 'react';
-// import {SyntheticEvent} from "react";
+
+import FindOutSection from './find-out-section/FindOutSection';
 import InfoSection from "./info-section/InfoSection";
 import IntroSection from "./Intro-Section";
 import './LandingPage.css';
 import NavbarSection from "./navbar-section/NavbarSection";
+
+// import StoriesSection from './stories/Stories-Section';
+
 
 interface ILandingProps {
     color?: 'blue' | 'green' | 'yellow';
@@ -54,10 +58,13 @@ class LandingPage extends React.Component<ILandingProps, ILandingStates> {
                 <NavbarSection color="blue" type={"hello"}/>
                 <IntroSection/>
                 {/*<div className="rectangle-s col-md-12">*/}
-                    {/*<img className="white-rec-s" src={"/assets/images/landing/BlueRectangle.png"}/>*/}
-                    {/*<img className="blue-rec-s" src={"/assets/images/landing/Rectangle.png"}/>*/}
+                {/*<img className="white-rec-s" src={"/assets/images/landing/BlueRectangle.png"}/>*/}
+                {/*<img className="blue-rec-s" src={"/assets/images/landing/Rectangle.png"}/>*/}
                 {/*</div>*/}
+                {/* <StoriesSection/> */}
+
                 <InfoSection/>
+                <FindOutSection/>
             </div>
         );
     }
