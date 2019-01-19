@@ -11,14 +11,14 @@ const style = {
         position: 'absolute' as 'absolute',
         width: '100vw'
     }
-}
+};
 
 class IntroSection extends React.Component {
     public render() {
         return (
                 <div className="col-md-12 pic-container" style={{padding: "0px"}}>
                     <img className="picture" src={"assets/holding-hands.png"}/>
-                    <div style={style.bottomDecor}/>
+                    <div className="bottom-decor" style={style.bottomDecor}/>
 
                     <div className={"picture-info col-md-12"}>
 

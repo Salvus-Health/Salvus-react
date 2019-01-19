@@ -47,11 +47,6 @@
     max-width: 45%;
 }
 
-.picture {
-    width: 100vw;
-    height: 95vh;
-}
-
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -65,13 +60,18 @@
 
     .pic-container {
         overflow: hidden;
+        height: 50vh;
     }
 
     .picture-info {
         /* position: absolute; */
         display: flex;
         justify-content: flex-start;
-        bottom: 130px;
+        bottom: 10vh;
+    }
+
+    .bottom-decor{
+        display:none;
     }
 
     .pitch {
@@ -156,8 +156,12 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .example {
-        background: orange;
+    .picture {
+        width: 100vw;
+        height: 95vh;
+    }
+    .bottom-decor{
+        display: flex;
     }
 }
 
