@@ -129,13 +129,19 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .example {
-        background: orange;
+    .justify-nav{
+        display:flex;
+        justify-content: flex-end;
+    }
+    .nav-op-c {
+        display: flex;
+        margin-left: 60px;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
     .example {
         background: pink;
     }

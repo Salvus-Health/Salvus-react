@@ -86,7 +86,7 @@ class NavbarSection extends React.Component<INavbarProps, INavbarStates> {
         document.addEventListener('scroll', () => {
             const isTop = window.scrollY < 100;
             if (isTop !== this.state.isTop) {
-                if (this.state.isOpen){
+                if (this.state.isOpen) {
                     return;
                 }
 
@@ -113,29 +113,31 @@ class NavbarSection extends React.Component<INavbarProps, INavbarStates> {
                 {/*<div className={this.state.triangleClass}/>*/}
                 {/*</div>*/}
                 <Navbar className={this.state.navbarClass + " col-md-12 col-6"} expand="md">
-                    <NavbarBrand className="row brand-nb">
+
+                    <NavbarBrand className="brand-nb">
                         Salvus
                     </NavbarBrand>
 
 
-                    <NavbarToggler onClick={this.toggle} style={ {backgroundColor:"white"}}>
+                    <NavbarToggler onClick={this.toggle} style={{backgroundColor: "white"}}>
                         <Octicon icon={ThreeBars}/>
                     </NavbarToggler>
 
 
                     <Collapse isOpen={this.state.isOpen}
-                              className="col-md-12"
-                              navbar={true}>
-                        <Nav className=" " navbar={true} >
-                            <NavItem className={"nav-op-c"}>
-                                <button type="button" className="btn navbar-options">Stories</button>
-                            </NavItem>
-
+                              className="justify-nav"
+                              navbar={true} >
+                        <Nav className=" " navbar={true}>
                             <NavItem className={"nav-op-c"}>
                                 <button type="button"
                                         onClick={this.buttonClick.bind(this)}
                                         className="btn navbar-options nav-item ">{this.props.color}</button>
                             </NavItem>
+
+                            <NavItem className={"nav-op-c"}>
+                                <button type="button" className="btn navbar-options">Stories</button>
+                            </NavItem>
+
 
                             <NavItem className={"nav-op-c"}>
                                 <button type="button" className="btn navbar-options nav-item">About us</button>
@@ -152,6 +154,7 @@ class NavbarSection extends React.Component<INavbarProps, INavbarStates> {
 
                         </Nav>
                     </Collapse>
+
                 </Navbar>
             </div>
         )
