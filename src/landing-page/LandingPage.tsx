@@ -1,5 +1,6 @@
 import * as React from 'react';
 // import {SyntheticEvent} from "react";
+import FindOutSection from './find-out-section/FindOutSection';
 import InfoSection from "./info-section/InfoSection";
 import IntroSection from "./Intro-Section";
 import './LandingPage.css';
@@ -120,7 +121,9 @@ class LandingPage extends React.Component<ILandingProps, ILandingStates> {
                 {/*</nav>*/}
                 <NavbarSection color= "blue" type={"hello"}/>
                 <IntroSection/>
+                {/* <StoriesSection/> */}
                 <InfoSection/>
+                <FindOutSection/>
             </div>
         );
     }
