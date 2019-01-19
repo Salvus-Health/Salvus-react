@@ -1,0 +1,94 @@
+
+
+/* Extra small devices (phones; 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .search-s{
+        margin-top: 17vw;
+    }
+
+    .check-avail-text-style{
+        font-size: 8vw;
+        margin-top: 2vw;
+    }
+    .heart-container-style{
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .heart-fade-style{
+        /*max-width: 100vw;*/
+    }
+
+    .heart-white-overlay-style{
+        background: linear-gradient(140.33deg, #FFFFFF 9.28%, rgba(255, 255, 255, 0) 67.81%);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .pane-style{
+        padding: 0px;
+    }
+
+    .find-info-s{
+        position: absolute;
+         z-index: 1020;
+        margin-bottom: 20px;
+        overflow: hidden;
+        /*bottom: 38vw;*/
+        background-color: rgba(242, 242, 242, 0.21);
+    }
+
+    .ready-font{
+        font-size: 11vw;
+    }
+}
+
+/* Large devices (laptops/desktops; 992px and up) */
+@media only screen and (min-width: 992px) {
+    .check-avail-text-style{
+        font-size: 3rem;
+        font-weight: 100;
+        letter-spacing: 0.03em;
+        margin-left: 10%;
+        text-align: left;
+    }
+    .heart-container-style{
+        margin-left: -10%;
+        margin-top: 10%;
+        position: relative;
+        z-index: -1;
+    }
+
+    .heart-fade-style{
+        max-width: 40vw;
+    }
+
+    .heart-white-overlay-style{
+        background: linear-gradient(91.33deg, #FFFFFF 9.28%, rgba(255, 255, 255, 0) 67.81%);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .pane-style{
+        height: 90vh;
+        // marginTop: 15vh;
+        position: relative;
+        width: 100vw
+    }
+    .find-info-s{
+    }
+
+
+    .ready-font{
+        font-size: 5rem;
+    }
+    .search-s{
+
+    }
+}
+

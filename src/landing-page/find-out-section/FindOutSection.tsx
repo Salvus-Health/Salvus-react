@@ -1,65 +1,40 @@
 import * as React from 'react';
+import "./FindOutSection.css";
 
-const style = {
-    checkAvailTextStyle: {
-        fontSize: '3rem',
-        fontWeight: 100,
-        letterSpacing: '0.03em',
-        marginLeft: '10%',
-        textAlign: 'left' as 'left'
-    },
-    heartContainerStyle: {
-      marginLeft: '-10%',
-      marginTop: '10%',
-      position: 'relative' as 'relative',
-      zIndex: -1
-    },
-    heartFadeStyle: {
-        // position: 'absolute' as 'absolute',
-        // right: '15%',
-        // top: '20%'
-        // marginLeft: '30%',
-        // zIndex: -1
-        maxWidth: '40vw'
-    },
-    heartWhiteOverlayStyle: {
-        background: 'linear-gradient(91.33deg, #FFFFFF 9.28%, rgba(255, 255, 255, 0) 67.81%)',
-        height: '100%',
-        position: 'absolute' as 'absolute',
-        top: 0,
-        width: '100%'
-    },
-    paneStyle: {
-        height: '90vh',
-        // marginTop: '15vh',
-        position: 'relative' as 'relative',
-        width: '100vw'
-    }
-}
 
 
 
 class FindOutSection extends React.Component {
     public render() {
         return(
-            <div style={style.paneStyle}>
+            <div className="pane-style col-md-12 col-12">
                 <div style={{alignItems: 'center', display: 'flex', justifyContent: 'center'}}>
-                    <div>
-                        <h1 style={{fontSize: '5rem'}}>Ready to begin?</h1>
-                        <h5 style={style.checkAvailTextStyle}>Check availability in<br/> your area</h5>
-                        <div>
-                            <input />
-                            <button>GO</button>
+                    <div className="find-info-s">
+                        <h1 className="ready-font">Ready to begin?</h1>
+                        <h5 className="check-avail-text-style">Check availability in<br/> your area</h5>
+                        <div className= "search-s">
+                            <div className="input-group mb-3">
+                                <input type="text" className="form-control" placeholder="Enter zipcode"
+                                       aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+                                <div className="input-group-append">
+                                    <button className="btn btn-primary" type="button">Button</button>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                    <div style={style.heartContainerStyle}>
-                        <img src="assets/images/landing/heart-fade.png" style={style.heartFadeStyle}/>
-                        <div style={style.heartWhiteOverlayStyle} />
+                    <div className="heart-container-style">
+                        <img src="assets/images/landing/heart-fade.png"
+                             className="heart-fade-style"/>
+                        <div className="heart-white-overlay-style" />
+
                     </div>
                 </div>
             </div>
         );
     }
+// btn-outline-secondary
 }
 
 export default FindOutSection;
+
