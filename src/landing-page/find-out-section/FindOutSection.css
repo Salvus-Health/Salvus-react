@@ -88,7 +88,8 @@
         font-size: 5rem;
     }
     .search-s{
-
+        display: flex;
+        justify-content: center;
     }
 }
 

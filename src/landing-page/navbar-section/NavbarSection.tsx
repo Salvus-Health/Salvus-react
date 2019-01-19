@@ -115,7 +115,7 @@ class NavbarSection extends React.Component<INavbarProps, INavbarStates> {
                 <Navbar className={this.state.navbarClass + " col-md-12 col-6"} expand="md">
 
                     <NavbarBrand className="brand-nb">
-                        Salvus
+                        <img src="logo.ico" style={{width:'2vw', marginLeft:'2vw'}} />
                     </NavbarBrand>
 
 

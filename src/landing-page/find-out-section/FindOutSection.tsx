@@ -12,8 +12,8 @@ class FindOutSection extends React.Component {
                     <div className="find-info-s">
                         <h1 className="ready-font">Ready to begin?</h1>
                         <h5 className="check-avail-text-style">Check availability in<br/> your area</h5>
-                        <div className= "search-s">
-                            <div className="input-group mb-3">
+                        <div className= "search-s col-md-12">
+                            <div className="input-group mb-3 col-md-8">
                                 <input type="text" className="form-control" placeholder="Enter zipcode"
                                        aria-label="Recipient's username" aria-describedby="basic-addon2"/>
                                 <div className="input-group-append">
