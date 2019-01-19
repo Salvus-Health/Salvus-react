@@ -5,7 +5,8 @@ import {
     CarouselIndicators,
     CarouselItem
 } from 'reactstrap';
-import {LandingPageInfo} from "./LandingPageInfo";
+// import {LandingPageInfo} from "./LandingPageInfo";
+import { InfoSectionData } from './InfoData';
 
 import "./InfoSection.css"
 
@@ -16,13 +17,14 @@ interface IInfoState {
 
 class InfoSection extends React.Component <any, IInfoState> {
 
-    private items: LandingPageInfo [] = [
-        new LandingPageInfo("/assets/images/landing/stories-ambulance.png", "this is my info"),
-        new LandingPageInfo("/assets/Holding-Hands-Doctor.svg", "this is my changed info"),
-        new LandingPageInfo("/assets/Holding-Hands-Doctor.svg", "this is my changed info"),
-        new LandingPageInfo("/assets/Holding-Hands-Doctor.svg", "this is my changed info"),
-        new LandingPageInfo("/assets/Holding-Hands-Doctor.svg", "this is my changed info"),
-    ];
+    // private items: LandingPageInfo [] = [
+    //     new LandingPageInfo("/assets/images/landing/stories-ambulance.png", "this is my info"),
+    //     new LandingPageInfo("/assets/Holding-Hands-Doctor.svg", "this is my changed info"),
+    //     new LandingPageInfo("/assets/Holding-Hands-Doctor.svg", "this is my changed info"),
+    //     new LandingPageInfo("/assets/Holding-Hands-Doctor.svg", "this is my changed info"),
+    //     new LandingPageInfo("/assets/Holding-Hands-Doctor.svg", "this is my changed info"),
+    // ];
+    private items = InfoSectionData;
     private animating = false;
 
     constructor(props: any) {
@@ -68,29 +70,37 @@ class InfoSection extends React.Component <any, IInfoState> {
         this.setState({activeIndex: newIndex});
     }
 
+    public createDescriptions(descs: string[]) {
+        const descriptions: JSX.Element[] = [];
+        for (const desc of descs) {
+            descriptions.push(<p className="description-s col-md-12">{desc}</p>);
+          }
+          return descriptions;
+    }
 
     public render() {
         const {activeIndex} = this.state;
 
-        const slides = this.items.map((item) => {
+        const slides = this.items.map((item, idx) => {
             return (
                 <CarouselItem
                     onExiting={this.onExiting}
                     onExited={this.onExited}
-                    key={item.img}
+                    key={idx}
                     className={"info-container"}
                 >
                     <div className="col-md-12 row car-item" style = {{marginBottom:"80px"}}>
                         <div className="col-md-6">
-                            <img className="col-md-6" src={item.img} alt={"Alt text"}/>
+                            <img className="col-md-6" src={item.Image} alt={"Alt text"}/>
                         </div>
 
                         <div className="col-md-6">
-                            <p className="title-s col-md-12">Emergency Care insurance</p>
-                            <p className="description-s col-md-12">
+                            <p className="title-s col-md-12">{item.Title}</p>
+                            {/* <p className="description-s col-md-12">
                                 In the realm of DPC, one has many questions regarding a big life
                                 event...
-                            </p>
+                            </p> */}
+                            {this.createDescriptions(item.Description)}
 
                         </div>
 

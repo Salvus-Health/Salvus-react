@@ -10,7 +10,7 @@
     }
 
     .description-s{
-        text-align: justify;
+        text-align: left;
     }
 
     .info-container{
@@ -36,11 +36,11 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .title-s{
-        text-align: justify;
+        text-align: left;
         font-size: 48px;
     }
 
     .description-s{
-        text-align: justify;
+        text-align: left;
     }
 }
