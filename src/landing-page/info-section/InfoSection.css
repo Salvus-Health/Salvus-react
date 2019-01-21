@@ -1,17 +1,28 @@
 .car-item{
     height: 300px;
+    font-size: calc(20px + 0.5vw);
+}
+
+.title-s{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.description-s{
+    font-size: 0.75em;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .title-s{
-        text-align: justify;
-        font-size: 30px;
+        text-align: left;
         margin-top: 30px;
+        font-size: 1em;
     }
 
     .description-s{
         text-align: left;
+        font-size: 0.7em;
     }
 
     .info-container{

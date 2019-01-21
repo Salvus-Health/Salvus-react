@@ -112,7 +112,7 @@ class NavbarSection extends React.Component<INavbarProps, INavbarStates> {
                 {/*<div className={"menu-container"} style={this.state.menuCStyle}>*/}
                 {/*<div className={this.state.triangleClass}/>*/}
                 {/*</div>*/}
-                <Navbar className={this.state.navbarClass + " col-md-12 col-6"} expand="md">
+                <Navbar className={this.state.navbarClass + " col-sm-3 col-md-12 col-6"} expand="md">
 
                     <NavbarBrand className="brand-nb">
                         <img src="logo.ico" style={{width:'2vw', marginLeft:'2vw'}} />
