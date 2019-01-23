@@ -23,7 +23,7 @@ class IntroSection extends React.Component {
 
                         <div className="info-column offset-1">
                             <p className={"intro-content intro-header col-md-10"}>Health Coverage Just for You</p>
-                            <p className="intro-desc col-md-8 pitch">Subscription-based preventative care for your Health. Emergency Coverage for your Peace of Mind<br/><br/> If you don’t love it, cancel anytime at no cost</p>
+                            <p className="intro-desc col-md-8 pitch">Subscription-Based Preventative Care for Your Health. Emergency Coverage for Your Peace of Mind<br/><br/> If You Don’t Love It, Cancel Anytime at No Cost</p>
 
                             <div className="col-md-6 pic-but-c">
                                 <button className="btn location-but col-md-9">Check Availability</button>

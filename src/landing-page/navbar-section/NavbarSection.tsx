@@ -16,6 +16,8 @@ import {
 // import DropdownMenu from "reactstrap/lib/DropdownMenu";
 import "./NavbarSection.css"
 
+import { Link } from 'react-router-dom';
+
 
 interface INavbarProps {
     color?: 'blue' | 'green' | 'yellow';
@@ -131,16 +133,14 @@ class NavbarSection extends React.Component<INavbarProps, INavbarStates> {
                             <NavItem className={"nav-op-c"}>
                                 <button type="button"
                                         onClick={this.buttonClick.bind(this)}
-                                        className="btn navbar-options nav-item ">{this.props.color}</button>
+                                        className="btn navbar-options nav-item ">Blog</button>
                             </NavItem>
 
                             <NavItem className={"nav-op-c"}>
-                                <button type="button" className="btn navbar-options">Stories</button>
-                            </NavItem>
-
-
-                            <NavItem className={"nav-op-c"}>
-                                <button type="button" className="btn navbar-options nav-item">About us</button>
+                                <button type="button" className="btn navbar-options nav-item">
+                                    <Link to="/about" style={{ textDecoration: 'none', color: 'black' }}>About Us
+                                    </Link>
+                                </button>
 
                             </NavItem>
 
@@ -148,7 +148,7 @@ class NavbarSection extends React.Component<INavbarProps, INavbarStates> {
                                 <button type="button" className="btn navbar-options nav-item">Create Account</button>
                             </NavItem>
                             <NavItem className={"nav-op-c"}>
-                                <button type="button" className="btn navbar-options nav-item sign-in-option">Sign in
+                                <button type="button" className="btn navbar-options nav-item sign-in-option">Sign In
                                 </button>
                             </NavItem>
 

@@ -81,9 +81,10 @@
     .bottom-decor{
         background: url('/assets/images/landing/bottom-mobile.svg');
         width: 100vw;
-        height: 65vh;
+        height: 67vh;
         position: absolute;
-        top: 35vh;
+        top: 33vh;
+        background-repeat: no-repeat;
     }
 
     .pitch {
